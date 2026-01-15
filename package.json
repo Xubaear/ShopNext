@@ -9,9 +9,19 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@stripe/stripe-js": "^8.6.1",
+    "atlas": "^1.0.0-alpha.0",
+    "bcryptjs": "^3.0.3",
+    "firebase": "^12.8.0",
+    "joi": "^18.0.2",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.3",
     "next": "16.1.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-toastify": "^11.0.5",
+    "stripe": "^20.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
