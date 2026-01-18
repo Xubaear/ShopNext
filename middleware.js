@@ -9,8 +9,8 @@ export function middleware(request) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  // Redirect to items if logged in user tries to access login
-  if (pathname === '/login' && userCookie) {
+  // Redirect to items if logged in user tries to access login or register
+  if ((pathname === '/login' || pathname === '/register') && userCookie) {
     return NextResponse.redirect(new URL('/items', request.url))
   }
 
@@ -18,5 +18,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/add-item', '/login']
+  matcher: ['/add-item', '/login', '/register']
 }
