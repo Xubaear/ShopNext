@@ -25,7 +25,7 @@ export default function ItemCard({ item }) {
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-semibold text-lg truncate">{item.name}</h3>
-          <span className="text-blue-600 font-bold">${item.price}</span>
+          <span className="text-blue-600 font-bold">{item.price} Taka</span>
         </div>
         
         <p className="text-gray-600 text-sm mb-3 line-clamp-2">{item.description}</p>
