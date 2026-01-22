@@ -56,7 +56,7 @@ const products = [
     name: "Coffee Mug Set",
     description: "Ceramic coffee mug set of 4 with beautiful designs",
     price: 649,
-    image: "https://i.ibb.co.com/rGnktmg0/R.png",
+    image: "https://i.ibb.co/rGnktmg0/R.png",
     category: "Home & Garden",
     rating: 4.3,
     reviews: 94
@@ -104,8 +104,8 @@ const products = [
 ];
 
 export async function GET(request, { params }) {
-  const id = parseInt(params.id);
-  const product = products.find(p => p.id === id);
+  const { id } = await params;
+  const product = products.find(p => p.id === parseInt(id));
   
   if (!product) {
     return NextResponse.json(
@@ -114,5 +114,8 @@ export async function GET(request, { params }) {
     );
   }
   
-  return NextResponse.json({ success: true, data: product });
+  return NextResponse.json({
+    success: true,
+    data: product
+  });
 }
