@@ -35,7 +35,7 @@ export default function LoginPage() {
         
         login(userData, token);
         toast.success('Login successful! Welcome back!');
-        router.push('/items');
+        router.push('/');
       } else {
         toast.error('Invalid email or password. Please register first if you don\'t have an account.');
       }
@@ -78,7 +78,7 @@ export default function LoginPage() {
       
       login(userData, token);
       toast.success('Demo login successful! Welcome to ShopNextTask! 🎉');
-      router.push('/items');
+      router.push('/');
     } catch (error) {
       toast.error('Demo login failed');
     } finally {

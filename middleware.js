@@ -9,9 +9,9 @@ export function middleware(request) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  // Redirect to items if logged in user tries to access login or register
+  // Redirect to home if logged in user tries to access login or register
   if ((pathname === '/login' || pathname === '/register') && userCookie) {
-    return NextResponse.redirect(new URL('/items', request.url))
+    return NextResponse.redirect(new URL('/', request.url))
   }
 
   return NextResponse.next()

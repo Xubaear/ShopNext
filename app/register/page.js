@@ -75,7 +75,7 @@ export default function RegisterPage() {
       
       login(userData, token);
       toast.success('Registration successful! Welcome to ShopNextTask!');
-      router.push('/items');
+      router.push('/');
     } catch (error) {
       toast.error('Registration failed');
     } finally {
