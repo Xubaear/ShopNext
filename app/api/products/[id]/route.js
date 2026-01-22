@@ -104,32 +104,15 @@ const products = [
 ];
 
 export async function GET(request, { params }) {
-  try {
-    const { id } = await params;
-    const productId = parseInt(id);
-    
-    if (isNaN(productId)) {
-      return NextResponse.json(
-        { success: false, message: "Invalid product ID" },
-        { status: 400 }
-      );
-    }
-    
-    const product = products.find(p => p.id === productId);
-    
-    if (!product) {
-      return NextResponse.json(
-        { success: false, message: "Product not found" },
-        { status: 404 }
-      );
-    }
-    
-    return NextResponse.json({ success: true, data: product });
-  } catch (error) {
-    console.error('API Error:', error);
+  const id = parseInt(params.id);
+  const product = products.find(p => p.id === id);
+  
+  if (!product) {
     return NextResponse.json(
-      { success: false, message: "Internal server error" },
-      { status: 500 }
+      { success: false, message: "Product not found" },
+      { status: 404 }
     );
   }
+  
+  return NextResponse.json({ success: true, data: product });
 }
