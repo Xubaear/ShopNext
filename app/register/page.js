@@ -74,7 +74,7 @@ export default function RegisterPage() {
       const token = 'mock-jwt-token-' + newUser.id;
       
       login(userData, token);
-      toast.success('Registration successful! Welcome to ShopNextTask!');
+      toast.success('Registration successful! Welcome to ShopNext!');
       router.push('/');
     } catch (error) {
       toast.error('Registration failed');
@@ -89,13 +89,13 @@ export default function RegisterPage() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
            
-            <span className="text-2xl font-bold text-gray-900">ShopNextTask</span>
+            <span className="text-2xl font-bold text-gray-900">ShopNext</span>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Create Your Account
           </h2>
           <p className="text-gray-600">
-            Join ShopNextTask to start managing your items
+            Join ShopNext to start managing your items
           </p>
         </div>
         

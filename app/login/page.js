@@ -77,7 +77,7 @@ export default function LoginPage() {
       const token = 'mock-jwt-token-' + demoUser.id;
       
       login(userData, token);
-      toast.success('Demo login successful! Welcome to ShopNextTask! 🎉');
+      toast.success('Demo login successful! Welcome to ShopNext! 🎉');
       router.push('/');
     } catch (error) {
       toast.error('Demo login failed');
@@ -92,7 +92,7 @@ export default function LoginPage() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             
-            <span className="text-2xl font-bold text-gray-900">ShopNextTask</span>
+            <span className="text-2xl font-bold text-gray-900">ShopNext</span>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Sign in to Your Account
